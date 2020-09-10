@@ -1,0 +1,101 @@
+.posMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100%;
+    z-index: 99;
+    height: 100vh;
+    overflow: hidden;
+
+    &__menu {
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        width: 20%;
+        z-index: 100;
+        height: 100vh;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: $cdark;
+        }
+        padding: 1.5rem 2rem;
+        background-color: white;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 0.8rem;
+            color: white;
+            padding: 0.5rem 0.8rem;
+            background-color: $corange;
+            text-align: center;
+            z-index: 2;
+            border-radius: $border4;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            color: $cdark;
+            margin-top: 0;
+            font-weight: 700;
+        }
+    }
+
+    &__action {
+        list-style-type: none;
+        padding: 0;
+        margin: 1.5rem auto 0.5rem;
+        display: grid;
+        li {
+            min-height: 100px;
+            margin: 0.75rem;
+            display: flex;
+            a {
+                display: flex;
+                flex-direction: column;
+                @include center();
+                text-align: center;
+                width: 100%;
+                background-color: lighten($cgrey, 35);
+                color: $dark-font;
+                padding: 1.5rem 1rem;
+                font-size: 1.2rem;
+                border-radius: $border12;
+                @include transition($all);
+                @include box-shadow($light-bs);
+                &:hover {
+                    background-color: darken($corange, 5);
+                    color: $cwhite;
+                    transform: translateY(-0.25rem);
+                    @include box-shadow($dark-bs);
+                }
+                &:active {
+                    transform: translateY(-0.05rem);
+                    @include box-shadow($dark-bs);
+                }
+                i {
+                    font-size: 1.75rem;
+                    margin-bottom: 0.5rem;
+                }
+                .item {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    
+}

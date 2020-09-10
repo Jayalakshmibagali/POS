@@ -1,0 +1,183 @@
+.pos-main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 100vh;
+    width: 100%;
+    &.layout-two {
+        grid-template-columns: 1fr 3fr;
+    }
+    .navbar-pos {
+        background-color: darken($corange, 10);
+        min-height: 72px;
+        // padding: 1rem 1rem;
+        .pos-menu {
+            color: $cwhite;
+            font-size: 2rem;
+            @include transition($all);
+            padding: 0 0.65rem;
+            border-radius: $border6;
+            margin-right: 0.75rem;
+
+            &:hover {
+                color: $dark-font;
+                background-color: $cwhite;
+            }
+        }
+        .navbar-collapse {
+            position: relative;
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.25rem;
+                        padding: 0.5rem 2rem;
+                        background-color: transparent;
+                        border-radius: $border6;
+                        color: $cwhite;
+                        margin: 0.25rem;
+                        @include transition($all);
+                        &:hover {
+                            background-color: $cwhite;
+                            color: $dark-font;
+                            @include box-shadow($icon-bs);
+                        }
+                        &:active {
+                            background-color: $cwhite;
+                            color: $dark-font;
+                            @include box-shadow($icon-bs);
+                        }
+                        &:focus {
+                            background-color: $cwhite;
+                            color: $dark-font;
+                            @include box-shadow($icon-bs);
+                        }
+                    }
+                }
+            }
+        }
+        .add-cust {
+            color: $cwhite;
+            font-size: 1rem;
+            @include transition($all);
+            padding: 0.75rem;
+            border-radius: $border6;
+            margin-right: 0.75rem;
+            
+            &.mail {
+                padding: 0.4rem 0.75rem;
+                font-size: 1.75rem;
+            }
+            &.print {
+                padding: 0.4rem 0.75rem;
+                font-size: 1.75rem;
+            }
+
+            &:hover {
+                color: $dark-font;
+                background-color: $cwhite;
+            }
+        }
+    }
+    &__left {
+        display: block;
+        position: relative;
+        z-index: 10;
+        border-right: 1px solid lighten($cgrey, 30);
+        .menu-items {
+            
+            &__catagory {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                li {
+                    min-height: 20vh;
+                    margin: 0.75rem;
+                    display: flex;
+                    a {
+                        display: flex;
+                        @include center();
+                        text-align: center;
+                        width: 100%;
+                        background-color: lighten($color: $cyellow, $amount: 20);
+                        color: $cdark;
+                        padding: 1rem;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        border-radius: $border12;
+                        @include transition($all);
+                        @include box-shadow($light-bs);
+
+                        &:hover {
+                            background-color: darken($corange, 5);
+                            color: $cwhite;
+                            transform: translateY(-0.25rem);
+                            @include box-shadow($dark-bs);
+                        }
+                        &:active {
+                            transform: translateY(-0.05rem);
+                            @include box-shadow($dark-bs);
+                        }
+                        .item {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            &__item {
+                list-style-type: none;
+                padding: 0;
+                margin: 1.5rem auto 0.5rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                li {
+                    height: 12vh;
+                    margin: 0.75rem;
+                    display: flex;
+                    .product {
+                        position: relative;
+                        width: 100%;
+                        background-color: lighten($cgrey, 30);
+                        color: $dark-font;
+                        padding: 1rem;
+                        border-radius: $border12;
+                        @include transition($all);
+                        @include box-shadow($light-bs);
+                        &__heading {
+                            @extend .pro-user__info--name;
+                        }
+                        &__img {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: space-between;
+                            img {
+                                max-width: 58px;
+                                border-radius: $border6;
+                                @include box-shadow($light-bs);
+                            }
+                            &--price{
+                                align-self: flex-end;
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                color: lighten($cdark, 25);
+                            }
+                        }
+                        &:hover {
+                            transform: translateY(-0.35rem);
+                            @include box-shadow($dark-bs);
+                        }
+                        &:active {
+                            transform: translateY(-0.05rem);
+                            @include box-shadow($dark-bs);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__right {
+        position: relative;
+        z-index: 5;
+    }
+}

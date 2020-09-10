@@ -1,0 +1,93 @@
+.cartitem {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.45rem 0.325rem 0.45rem 0.45rem;
+    box-shadow: 0 2px 10px -2px #dfdfdf;
+    border-color: #dfdfdf;
+    border-radius: 4px;
+    z-index: 100;
+    max-height: 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: $cdark;
+    }
+    // Receipts View Cart Items
+    &.receiptViewCartitem {
+        border-radius: 0;
+        height: auto;
+        box-shadow: none;
+        max-height: unset;
+        .cartitemwrap {
+            border-bottom: 1px solid #dfdfdf;
+        }
+    }
+    
+    .cartitemwrap {
+        position: relative;
+        width: 100%;
+        display: grid;
+        border-radius: 4px;
+        @include transition ($all);
+        &:hover {
+            background-color: $bg-light;
+        }
+        &__detail {
+            display: flex;
+            width: 100%;
+            margin-bottom: 0.35rem;
+            &--img {
+                .prodimg {
+                    width: 60px;
+                    height: 60px;
+                    border: 1px dotted #cdcdcd;
+                    border-radius: 4px;
+                    background-color: white;
+                    margin: 0.25rem 0 0 0.25rem;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        padding: 0.15rem;
+                    }
+                }
+            }
+            &--info {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0rem 1rem;
+                .prodname {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    padding-top: 0.25rem;
+                }
+                .proinfo {
+                    display: flex;
+                    justify-content: space-between;
+                    .produnit{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        padding-right: 0.5rem;
+                        color: lighten($color: $cdark, $amount: 35);
+
+                    }
+                    .prodprice {
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        padding-right: 0.5rem;
+                        color: darken($color: $corange, $amount: 5);
+                    }
+                }
+            }
+        }
+    }
+}

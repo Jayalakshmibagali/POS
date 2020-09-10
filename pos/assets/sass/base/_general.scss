@@ -1,0 +1,60 @@
+/*-------------------------------------------------------*/
+/* General
+/*-------------------------------------------------------*/
+::-moz-selection { color: #fff; background: $corange; }
+::-webkit-selection { color: #fff; background: $corange; }
+::selection { color: #fff; background: $corange; }
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $corange;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: $corange;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  outline: 0;
+  color: $cdark;
+  overflow: hidden;
+
+  img {
+    border: none;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+}
+
+.scrollSec {
+  height: 92vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar-track {
+      background-color: #fff;
+  }
+  &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: $cdark;
+  }
+}

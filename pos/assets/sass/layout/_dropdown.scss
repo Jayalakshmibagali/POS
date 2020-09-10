@@ -1,0 +1,80 @@
+.navbar-pos {
+    .navbar-collapse {
+        .navbar-nav {
+            .nav-item {
+                .dropdown-menu {
+                    border-radius: $border12;
+                    box-shadow: none;
+                    margin-top: 10px;
+                    width: 300px;
+                    padding-top: 0;
+                  
+                    &:before {
+                        content: "";
+                        border-bottom: 10px solid lighten($color: $cdark, $amount: 75);
+                        border-right: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        position: absolute;
+                        top: -10px;
+                        left: 16px;
+                        z-index: 10;
+                    }
+                  
+                    &:after {
+                        content: "";
+                        border-bottom: 12px solid lighten($color: $cdark, $amount: 75);
+                        border-right: 12px solid transparent;
+                        border-left: 12px solid transparent;
+                        position: absolute;
+                        top: -12px;
+                        left: 14px;
+                        z-index: 9;
+                    }
+
+                    &__height {
+                        max-height: 360px;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        &::-webkit-scrollbar-track {
+                            background-color: #fff;
+                        }
+                        &::-webkit-scrollbar {
+                            width: 8px;
+                            background-color: #fff;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 4px;
+                            background-color: $cdark;
+                        }
+                    }
+
+                    .dropdown-item {
+                        padding: 0.65rem;
+                        font-weight: 500;
+                        display: grid;
+                        @include transition($all);
+                        &.heading {
+                            background-color: lighten($cdark, 75);
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                            color: $cdark;
+                            border-radius: $border12;
+                            text-transform: capitalize;
+                        }
+                        &__name {
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                        }
+                        &__num {
+                            font-size: 1rem;
+                            color:  lighten($cdark, 50);
+                        }
+                        &:hover {
+                            background-color: lighten($cdark, 75);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

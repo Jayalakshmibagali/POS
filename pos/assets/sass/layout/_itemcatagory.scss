@@ -1,0 +1,46 @@
+.pos {
+    margin-top: 2rem;
+    &__category {
+        display: flex;
+        margin: 1rem;
+        &--items {
+            background-color: $cyellow;
+            display: flex;
+            min-height: 150px;
+            @include center();
+            color: $cwhite;
+            padding: 3.5rem 1rem;
+            font-size: 1.25rem;
+            text-align: center;
+            font-weight: 500;
+            border-radius: $border12;
+            @include transition($all);
+            &:hover {
+                background-color: darken($corange, 5);
+                color: $cwhite;
+                transform: translateY(-0.25rem);
+                @include box-shadow($dark-bs);
+            }
+            &:active {
+                transform: translateY(-0.05rem);
+                @include box-shadow($dark-bs);
+            }
+        }
+        &--sub-items {
+            background-color: $border-color;
+            color: $cyellow;
+            padding: 3rem 1rem;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 500;
+            border-radius: 0.75rem;
+            max-height: 128px;
+            // margin: 0.75rem;
+            box-shadow: #00000029;
+            span {
+                position: relative;
+                bottom: 0.75rem;
+            }
+        }
+    }
+}

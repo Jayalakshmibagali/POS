@@ -1,0 +1,42 @@
+.signIn {
+    height: $minh100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    img {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    input {
+        height: calc(2em + .25rem + 6px);
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 10px;
+        border: 1px solid $cgrey;
+        margin: 0 5px 5px 0;
+        border-radius: $border6;
+        &:hover {
+            border-color: $corange;
+        }
+        &:focus {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+        &:active {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+        &.error {
+            color: #ff6b6b;
+        }
+        &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+            color: #ccc;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.pos-settings {
+    position: relative;
+    padding-left: 0.65rem;
+    &__date {
+        background-color: lighten($cgrey, 35);
+        padding: 0.5rem 0.65rem;
+        p {
+            font-size: 1rem;
+            color: $cdark;
+            margin: 0;
+            font-weight: 600;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid lighten($cgrey, 30);
+        padding: 1.5rem 1rem;
+        box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+        @include transition ($all);
+        i {
+            font-size: 1.4rem;
+            color: $cdark;
+            font-weight: 700;
+            margin-right: 0.75rem;
+        }
+        span {
+            font-size: 1.2rem;
+            color: #141414;
+            font-weight: 600;
+        }
+        &:hover {
+            background-color: darken($corange, 10);
+            i, span {
+                color: $cwhite;
+                text-decoration: none;
+            }
+        }
+        &.active {
+            background-color: darken($corange, 10);
+            i, span {
+                color: $cwhite;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.general {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.75rem;
+        padding: 1.3rem;
+        margin-bottom: 1.4rem;
+        box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+        &--name {
+            font-weight: 600;
+            color: $cdark;
+            font-size: 18px;
+        }
+        &--subname {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $cgrey;
+        }
+    }
+}
+
+.printer {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.75rem;
+        padding: 1.3rem;
+        margin-bottom: 1.4rem;
+        box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+        &--name {
+            font-weight: 600;
+            color: $cdark;
+            font-size: 18px;
+        }
+        &--subname {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $cgrey;
+        }
+    }
+}
+
+.printing {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.75rem;
+        padding: 1.3rem;
+        margin-bottom: 1.4rem;
+        box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+        &--name {
+            font-weight: 600;
+            color: $cdark;
+            font-size: 18px;
+        }
+        &--subname {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $cgrey;
+        }
+    }
+}

@@ -1,0 +1,175 @@
+.addedUser {
+    position: relative;
+    padding-left: 0.75rem;
+    &__alpha {
+        background-color: lighten($cgrey, 35);
+        padding: 0.5rem 0.65rem;
+        p {
+            font-size: 1.1rem;
+            color: $cdark;
+            margin-left: 1rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border-bottom: 1px solid lighten($cgrey, 30);
+        padding: 1rem;
+        box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+        @include transition ($all);
+        &--img {
+            img {
+                width: 50px;
+                border-radius: $border6;
+                @include box-shadow($light-bs);
+            }
+        }
+        &--info {
+            margin-left: 0.75rem;
+            h6 {
+                font-size: 1.1rem;
+                color: $cdark;
+                margin-bottom: 0;
+                font-weight: 700;
+            }
+            p {
+                color: lighten($cdark, 40);
+                font-weight: 600;
+                margin-bottom: 0;
+                font-size: 1rem;
+            }
+        }
+        &:hover {
+            background-color: lighten($cgrey, 30);
+            h6, p, span {
+                color: $cdark;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.addUser {
+    position: relative;
+    padding: 1rem;
+    &__input {
+        padding: 1rem;
+        border: 1.3px solid lighten($cgrey, 20);
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+        @include box-shadow($light-bs);
+        &--type {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid lighten($cgrey, 20);
+            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+            label {
+                font-size: 16px;
+                font-weight: 500;
+            }
+            input {
+                font-size: 1.2rem;
+                border: none;
+                text-align: right;
+                width: 50%;
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+                &:active {
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+            .gender {
+                input {
+                    width: auto;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+        }
+        &--decs {
+            textarea {
+                font-size: 1rem;
+                border: none;
+                width: 100%;
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+                &:active {
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+    &__setting {
+        padding: 1rem;
+        border: 1.3px solid lighten($cgrey, 20);
+        border-radius: 0.5rem;
+        // modules section
+    }
+}
+
+// 
+.modules {
+    @include box-shadow($light-bs);
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid lighten($cgrey, 20);
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    &__heading {
+        h6 {
+            font-size: 1.1rem;
+            color: $cdark;
+            color: lighten($cdark, 10);
+        }
+    }
+}
+// toggle section
+.modules__toggle {
+    &--background {
+        transition: all 0.4s ease-in;
+        background: lighten($cgrey, 20);
+        width: 42px;
+        height: 24px;
+        border-radius: 30px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-ball {
+        transition: all 0.2s ease-out;
+        width: 24px;
+        height: 24px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 1px 1px 6px 0px grey;
+    }
+}
+.switched-on {
+    .modules__toggle--background {
+        background: darken($corange, 5);
+    }
+    .toggle-ball {
+        display: block;
+        margin-left: 20px;
+    }
+}

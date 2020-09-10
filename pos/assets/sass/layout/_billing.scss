@@ -1,0 +1,79 @@
+.posBill {
+    .nav {
+        border-bottom: none;
+        a {
+            border-radius: $border8;
+            color: $cdark;
+            background-color: lighten($color: $cdark, $amount: 75);
+            &.active {
+                color: $cwhite;
+                background-color: $corange;
+                border-radius: $border8;
+            }
+        }
+    }
+    .input-group {
+        input {
+            margin-right: 0;
+        }
+    }
+    input {
+        height: 48px;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 10px;
+        border: 1px solid $cgrey;
+        margin: 0 5px 5px 0;
+        border-radius: $border8;
+        &:hover {
+            border-color: $corange;
+        }
+        &:focus {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+        &:active {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.tender {
+    position: relative;
+    display: none;
+    &__heading {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    input {
+        height: 48px;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 10px;
+        border: 1px solid $cgrey;
+        margin: 0 5px 5px 0;
+        border-radius: $border8;
+        &:hover {
+            border-color: $corange;
+        }
+        &:focus {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+        &:active {
+            border-color: $corange;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
